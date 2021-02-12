@@ -1,0 +1,27 @@
+
+{
+    "java.home": "D:/programs/software/java",
+    "workbench.colorCustomizations": {
+        "activityBar.activeBackground": "#75b762",
+        "activityBar.activeBorder": "#e9ecf5",
+        "activityBar.background": "#75b762",
+        "activityBar.foreground": "#15202b",
+        "activityBar.inactiveForeground": "#15202b99",
+        "activityBarBadge.background": "#e9ecf5",
+        "activityBarBadge.foreground": "#15202b",
+        "statusBar.background": "#5b9e48",
+        "statusBar.foreground": "#15202b",
+        "statusBarItem.hoverBackground": "#477b38",
+        "titleBar.activeBackground": "#5b9e48",
+        "titleBar.activeForeground": "#15202b",
+        "titleBar.inactiveBackground": "#5b9e4899",
+        "titleBar.inactiveForeground": "#15202b99"
+    },
+    "peacock.color": "#5B9E48",
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    }
+}

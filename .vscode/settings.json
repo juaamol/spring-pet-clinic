@@ -24,5 +24,6 @@
         "**/.settings": true,
         "**/.factorypath": true
     },
-    "maven.view": "hierarchical"
+    "maven.view": "hierarchical",
+    "java.dependency.packagePresentation": "hierarchical"
 }

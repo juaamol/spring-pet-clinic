@@ -4,12 +4,12 @@
   <parent>
     <artifactId>spring-pet-clinic</artifactId>
     <groupId>com.jambulud</groupId>
-    <version>0.0.2-SNAPSHOT</version>
+    <version>0.0.2</version>
   </parent>
 
   <groupId>com.jambulud</groupId>
   <artifactId>pet-clinic-data</artifactId>
-  <version>0.0.2-SNAPSHOT</version>
+  <version>0.0.2</version>
 
   <name>pet-clinic-data</name>
   <description>A simple pet-clinic-data.</description>

@@ -1,6 +1,9 @@
 package com.jambulud.springpetclinic.model;
 
-public class Person {
+public class Person extends BaseEntity {
+
+    private static final long serialVersionUID = 382555506387137338L;
+    
     private String firstName;
     private String lastName;
 

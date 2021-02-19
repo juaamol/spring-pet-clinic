@@ -1,13 +1,16 @@
 package com.jambulud.springpetclinic.services.map;
 
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-public class AbstractMapService<T, ID> {
+import com.jambulud.springpetclinic.model.BaseEntity;
 
-  protected Map<ID, T> map = new HashMap<>();
+public class AbstractMapService<T extends BaseEntity, ID extends Long> {
+
+  protected Map<Long, T> map = new HashMap<>();
 
   Set<T> findAll() {
 
@@ -19,9 +22,17 @@ public class AbstractMapService<T, ID> {
     return this.map.get(id);
   }
 
-  T save(ID id, T object) {
+  T save(T object) {
 
-    this.map.put(id, object);
+    if (object != null) {
+      if (object.getId() == null) {
+        object.setId(this.getNextId());
+      }
+
+      this.map.put(object.getId(), object);
+    } else {
+      throw new RuntimeException("Object cannot be null");
+    }
 
     return object;
   }
@@ -29,6 +40,17 @@ public class AbstractMapService<T, ID> {
   void deleteById(ID id) {
 
     this.map.remove(id);
+  }
+
+  private Long getNextId() {
+
+    Set<Long> keys = this.map.keySet();
+
+    if (keys.isEmpty()) {
+      return 1L;
+    }
+
+    return Collections.max(keys) + 1;
   }
 
   void delete(T object) {

@@ -2,37 +2,42 @@ package com.jambulud.springpetclinic.services.map;
 
 import java.util.Set;
 
+import org.springframework.stereotype.Service;
+
 import com.jambulud.springpetclinic.model.Vet;
 import com.jambulud.springpetclinic.services.VetService;
-
-import org.springframework.stereotype.Service;
 
 @Service
 public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
 
-    @Override
-    public Set<Vet> findAll() {
-        return super.findAll();
-    }
+  @Override
+  public Set<Vet> findAll() {
 
-    @Override
-    public Vet findById(Long id) {
-        return super.findById(id);
-    }
+    return super.findAll();
+  }
 
-    @Override
-    public Vet save(Vet object) {
-        return super.save(object.getId(), object);
-    }
+  @Override
+  public Vet findById(Long id) {
 
-    @Override
-    public void delete(Vet object) {
-        super.delete(object);
-    }
+    return super.findById(id);
+  }
 
-    @Override
-    public void deleteById(Long id) {
-        super.deleteById(id);
-    }
+  @Override
+  public Vet save(Vet object) {
+
+    return super.save(object);
+  }
+
+  @Override
+  public void delete(Vet object) {
+
+    super.delete(object);
+  }
+
+  @Override
+  public void deleteById(Long id) {
+
+    super.deleteById(id);
+  }
 
 }

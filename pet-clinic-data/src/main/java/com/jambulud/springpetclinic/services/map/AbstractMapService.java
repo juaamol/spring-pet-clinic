@@ -6,29 +6,34 @@ import java.util.Map;
 import java.util.Set;
 
 public class AbstractMapService<T, ID> {
-    
-    protected Map<ID, T> map = new HashMap<>();
 
-    Set<T> findAll() {
-        return new HashSet<>(map.values());
-    }
+  protected Map<ID, T> map = new HashMap<>();
 
-    T findById(ID id) {
-        return map.get(id);
-    }
+  Set<T> findAll() {
 
-    T save(ID id, T object) {
-        map.put(id, object);
+    return new HashSet<>(this.map.values());
+  }
 
-        return object;
-    }
+  T findById(ID id) {
 
-    void deleteById(ID id) {
-        map.remove(id);
-    }
+    return this.map.get(id);
+  }
 
-    void delete(T object) {
-        map.entrySet().removeIf(entry -> entry.getValue().equals(object));
-    }
+  T save(ID id, T object) {
+
+    this.map.put(id, object);
+
+    return object;
+  }
+
+  void deleteById(ID id) {
+
+    this.map.remove(id);
+  }
+
+  void delete(T object) {
+
+    this.map.entrySet().removeIf(entry -> entry.getValue().equals(object));
+  }
 
 }
